@@ -138,6 +138,7 @@ def save_img():
 
 #################################################################
 
+# 달력 페이지
 @app.route('/calendar')
 def render_calendar():
     return render_template('calender.html')
@@ -188,21 +189,24 @@ def todo_cancel():
     db.todo.update_one({'num': int(num_receive)}, {'$set': {'done': 0}})
     return jsonify({'msg': '취소 완료!'})
 
+# 삭제함수를 실행시켰을때 DB 삭제하기
 @app.route("/todo/delete", methods=["POST"])
 def todo_delete():
     num_receive = request.form['num_give']
     print("데이터 확인 : " + num_receive);
     # print로 찍어봤을 때, 해당 순번이 정상적으로 들어옴
-    # 문제는 mongDb에 있는 num은 int형이고, 내가 받아오려고 했던 num은 str형식이었음
+    # 문제는 mongoDb에 있는 num은 int형이고, 내가 받아오려고 했던 num은 str형식이었음
     db.todo.delete_one({'num': int(num_receive)})
     # 문자열로 받은 데이터를 정수형으로 변환 시켜줘서 문제 해결
     # int()를 이용한 형변환
     return jsonify({'msg': '삭제 완료!'})
 
+# 공부기록 페이지
 @app.route('/studylog')
 def studylog():
     return render_template('list.html')
 
+# DB에 공부기록 리스트 값 저장하기
 @app.route("/list", methods=["POST"])
 def list_post():
     name_receive = request.form['name_give']
@@ -226,24 +230,27 @@ def list_post():
 
     return jsonify({'msg': '저장 완료!!'})
 
-
+# 공부기록 리스트의 값 가져와서 보여주기
 @app.route("/list", methods=["GET"])
 def list_get():
     list_list = list(db.list.find({}, {'_id': False}))
     return jsonify({'lists': list_list})
 
+# 완료함수를 실행시켰을 때 done 값을 1으로 변경하기
 @app.route("/list/done", methods=["POST"])
 def list_done():
     num_receive = request.form['num_give']
     db.list.update_one({'num': int(num_receive)}, {'$set': {'done': 1}})
     return jsonify({'msg': '공부 목록 완료! 기억해야지!'})
 
+# 취소함수를 실행시켰을 때 done 값을 0으로 변경하기
 @app.route("/list/undone", methods=["POST"])
 def list_undone():
     num_receive = request.form['num_give']
     db.list.update_one({'num': int(num_receive)}, {'$set': {'done': 0}})
     return jsonify({'msg': '취소 완료~! 더해보자!'})
 
+# 삭제함수를 실행시켰을 때 DB삭제
 @app.route("/list/delete", methods=["POST"])
 def list_delete():
     num_receive = request.form['num_give']
