@@ -19,8 +19,7 @@
         let getOnlyday = getdays[1];
         let decodeday = decodeURI(getOnlyday)
 
-
-
+        // 함수 실행시 메인화면으로 넘기기
         function to_do() {
             window.location.href = "/"
         }
@@ -28,8 +27,7 @@
             show_todo()
         });
 
-        {#겟 방식으로 저장된 데이터값 불러오기#}
-
+        // 겟 방식으로 저장된 데이터값 불러오기
         function show_todo() {
             $.ajax({
                 type: "GET",
@@ -58,19 +56,13 @@
                                              </li>`
                             }
                         }
-
-
-
-
                         $('#todo-list').append(temp_html)
-
-
                     }
                 }
             });
         }
 
-        {#포스트 방식으로 데이터 저장하기#}
+        // 포스트 방식으로 데이터 저장하기
         function save_todo() {
             let todo = $('#todo-input').val()
             let date = decodeday
@@ -89,7 +81,7 @@
             });
         }
 
-        {#체크박스 체크시 num의 값을 0으로 변경#}
+        // 체크박스 체크시 num의 값을 0으로 변경
         function done_todo(num) {
             $.ajax({
                 type: "POST",
@@ -102,7 +94,7 @@
             });
         }
 
-        {#체크박스 체크시 num의 값을 1로 변경#}
+        //체크박스 체크시 num의 값을 1로 변경
         function cancel_todo(num) {
             $.ajax({
                 type: "POST",
@@ -115,7 +107,7 @@
             });
         }
 
-        {#데이터 삭제기능#}
+        // 데이터 삭제기능
         function delete_todo(num) {
             $.ajax({
                 type: "POST",
