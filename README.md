@@ -6,6 +6,6 @@
 <br>
 <strong>프로젝트 시연영상 : https://youtu.be/ZOTxBnSEkKk</strong>
 <br>
-<strong>Tech Stack</strong>
+<h2><strong>⚡ Tech Stack⚡</strong></h2>
 </br>
-</br>
+
