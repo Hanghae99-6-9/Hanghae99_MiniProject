@@ -1,2 +1,2 @@
 # Hanghae99_MiniProject
-Hanghae99 6기 : 1주차 9조의 MiniProject
+# Project name : 스파르타 항해 나침반 (H-Compass)
