@@ -11,4 +11,14 @@
 <br>
 <h2><strong>🔭 핵심 기능 🔭</strong></h2>
 </br>
-<p><strong></strong></p>
+<p><strong>로그인/회원가입 기능</strong></p>
+<p><strong>달력 메인페이지 기능</strong></p>
+<p><strong>todo-list 기능</strong></p>
+<p><strong>공부기록 기능</strong></p>
+<br>
+<h2><strong>😄 개인 회고 😄</strong></h2>
+</br>
+<p><strong>김현진 : </strong></p>
+<p><strong>김혜리 : </strong></p>
+<p><strong>최지은 : https://choijying21.tistory.com/31</strong></p>
+<p><strong>임세영 : </strong></p>
