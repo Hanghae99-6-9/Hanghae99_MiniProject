@@ -19,6 +19,6 @@
 <h2><strong>😄 개인 회고 😄</strong></h2>
 </br>
 <p><strong>김현진 : https://velog.io/@guswls1419/memoirsWeek-1</strong></p>
-<p><strong>김혜리 : </strong></p>
+<p><strong>김혜리 : https://merry-hi5.tistory.com/</strong></p>
 <p><strong>최지은 : https://choijying21.tistory.com/31</strong></p>
 <p><strong>임세영 : https://insidelamp.tistory.com/2
